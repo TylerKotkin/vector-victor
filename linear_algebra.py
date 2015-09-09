@@ -1,3 +1,5 @@
+import math
+
 class ShapeException(Exception):
     pass
 
@@ -54,7 +56,18 @@ def vector_multiply(vector_1, y):
     return v_mult
 
 # def vector_mean(vector):
+"""
+#     mean([a b], [c d]) = [mean(a, c) mean(b, d)]
+#
+#     mean(Vector)       = Vector
+#     """
 #     pass
 #
-# def magnitude(vector):
-#     pass
+def magnitude(vector_1):
+     """
+     magnitude([a b])  = sqrt(a^2 + b^2)
+
+     magnitude(Vector) = Scalar
+     """
+     v_mag = sum([x**2 for x in vector_1])
+     return math.sqrt(v_mag)
