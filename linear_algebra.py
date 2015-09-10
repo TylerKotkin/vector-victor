@@ -31,6 +31,9 @@ def vector_sub(vector_1, vector_2):
 def vector_sum(*args):
      """vector_sum can take any number of vectors and add them together."""
 
+     for x in args:
+        if len(args[0]) != len(x):
+            raise ShapeException
 
      v_sum = [sum(x) for x in zip(*args)]
      return v_sum
